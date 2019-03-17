@@ -15,5 +15,7 @@ public:
 	void setProductBuilder(Builder* b);
 	void getNewProduct();
 	void printProductList();
+	void writeLog();
+	void readLog();
 };
 

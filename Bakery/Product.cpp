@@ -6,13 +6,13 @@ using namespace std;
 Product::Product()
 {
 	 name="";
-	 ryeFlour = ""; // ржаная мука
-	 wheatFlour = ""; // пшеничная мука
+	 ryeFlour = "";
+	 wheatFlour = "";
 	 eggs = "";
 	 milk = "";
-	 cream = ""; // сливки
-	 custard = ""; // крем
-	 sourCream = ""; // сметана
+	 cream = "";
+	 custard = "";
+	 sourCream = "";
 	 water = "";
 	 ingridientsList = "";
 }
@@ -69,13 +69,18 @@ void Product::setWater(string W)
 
 void Product::makeIngridientsList()
 {
-	ingridientsList = "Название изделия: " + name + '\n' + "Пшеничная мука: " + ryeFlour + " гр. \n"
-		+ "Ржаная мука: " + wheatFlour + " гр. \n" + "Яица: " + eggs + " шт. \n" + "Молоко: "
-		+ milk + " мл. \n" + "Сливки: " + cream + " мл. \n" + "Крем: " + custard + " мл. \n"
-		+ "Сметана: " + sourCream + " мл. \n" + "Вода: " + water + " мл. \n";
+	ingridientsList = "Name of the product: " + name + '\n' + "Wheat Flour: " + wheatFlour + " g. \n" +
+		"Rye Flour: " + ryeFlour + " g. \n" + "Eggs: " + eggs + "  \n" + "Milk: "
+		+ milk + " ml. \n" + "Cream: " + cream + "ml. \n" + "Custard: " + custard + " ml. \n"
+		+ "Sour Cream: " + sourCream + " ml. \n" + "Water: " + water + " ml. \n";
 }
 
 void Product::printList()
 {
 	cout << ingridientsList << endl;
+}
+
+string Product::getList()
+{
+	return ingridientsList;
 }

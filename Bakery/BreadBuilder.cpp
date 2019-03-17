@@ -11,19 +11,24 @@ BreadBuilder::~BreadBuilder()
 {
 }
 
+void BreadBuilder::buildName()
+{
+	product->setName("Bread");
+}
+
 void BreadBuilder::buildRyeFlour()
 {
-	product->setRyeFlour("400");
+	product->setRyeFlour("-");
 }
 
 void BreadBuilder::buildWheatFlour()
 {
-	product->setWheatFlour("-");
+	product->setWheatFlour("400");
 }
 
 void BreadBuilder::buildEggs()
 {
-	product->setEggs("4");
+	product->setEggs("-");
 }
 
 void BreadBuilder::buildMilk()

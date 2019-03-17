@@ -31,6 +31,7 @@ public:
 	void build();
 	void makeIngridientsList();
 	void printList();
+	string getList();
 	
 };
 

@@ -1,11 +1,11 @@
 #pragma once
 #include "Builder.h"
-class BreadBuilder :
+class CiabattaBuilder :
 	public Builder
 {
 public:
-	BreadBuilder();
-	~BreadBuilder();
+	CiabattaBuilder();
+	~CiabattaBuilder();
 	void buildName() override;
 	void buildRyeFlour() override;
 	void buildWheatFlour() override;

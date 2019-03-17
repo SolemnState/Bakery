@@ -8,8 +8,8 @@ class Builder
 protected:
 	Product* product;
 public:
-	void createNewProduct();
 	Product* getProduct();
+	virtual void buildName()=0;
 	virtual void buildRyeFlour()=0;
 	virtual void buildWheatFlour()=0;
 	virtual void buildEggs()=0;
