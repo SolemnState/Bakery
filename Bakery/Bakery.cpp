@@ -63,12 +63,18 @@ void Bakery::readLog()
 	try
 	{
 		fileR.open("Log.txt");
-		while (!fileR.eof())
+		fileR.seekg(0, ios::end);
+		if (int(fileR.tellg())!=0)
 		{
-			string buf;
-			getline(fileR, buf);
-			cout << buf << endl;
+			fileR.seekg(0, ios::beg);
+			while (!fileR.eof())
+			{
+				string buf;
+				getline(fileR, buf);
+				cout << buf << endl;
+			}
 		}
+		else cout << "Can't read empty file!" << endl;
 		fileR.close();
 	}
 	catch (const ifstream::failure& exc)

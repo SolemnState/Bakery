@@ -6,13 +6,13 @@ using namespace std;
 class Product
 {
 	string name;
-	string ryeFlour; // ржаная мука
-	string wheatFlour; // пшеничная мука
+	string ryeFlour; 
+	string wheatFlour; 
 	string eggs;
 	string milk;
-	string cream; // сливки
-	string custard; // крем
-	string sourCream; // сметана
+	string cream; 
+	string custard; 
+	string sourCream; 
 	string water;
 	string ingridientsList;
 public:
@@ -28,7 +28,6 @@ public:
 	void setCustard(string Cu);
 	void setSourCream(string SC);
 	void setWater(string W);
-	void build();
 	void makeIngridientsList();
 	void printList();
 	string getList();
