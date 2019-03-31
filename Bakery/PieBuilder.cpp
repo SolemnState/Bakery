@@ -3,13 +3,11 @@
 
 
 PieBuilder::PieBuilder()
-{
-}
+{}
 
 
 PieBuilder::~PieBuilder()
-{
-}
+{}
 
 void PieBuilder::buildName()
 {

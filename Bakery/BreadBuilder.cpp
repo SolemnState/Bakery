@@ -3,13 +3,11 @@
 
 
 BreadBuilder::BreadBuilder()
-{
-}
+{}
 
 
 BreadBuilder::~BreadBuilder()
-{
-}
+{}
 
 void BreadBuilder::buildName()
 {

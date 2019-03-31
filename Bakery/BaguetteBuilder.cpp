@@ -3,13 +3,11 @@
 
 
 BaguetteBuilder::BaguetteBuilder()
-{
-}
+{}
 
 
 BaguetteBuilder::~BaguetteBuilder()
-{
-}
+{}
 
 void BaguetteBuilder::buildName()
 {

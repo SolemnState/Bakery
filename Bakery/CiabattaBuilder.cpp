@@ -3,13 +3,11 @@
 
 
 CiabattaBuilder::CiabattaBuilder()
-{
-}
+{}
 
 
 CiabattaBuilder::~CiabattaBuilder()
-{
-}
+{}
 
 void CiabattaBuilder::buildName()
 {

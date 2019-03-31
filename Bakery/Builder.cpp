@@ -5,7 +5,9 @@
 void Builder::formList()
 {
 	product->makeIngridientsList();
+	product->makeJson();
 }
+
 
 Builder::Builder()
 {

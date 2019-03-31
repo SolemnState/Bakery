@@ -3,13 +3,11 @@
 
 
 CakeBuilder::CakeBuilder()
-{
-}
+{}
 
 
 CakeBuilder::~CakeBuilder()
-{
-}
+{}
 
 void CakeBuilder::buildName()
 {

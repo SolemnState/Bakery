@@ -1,6 +1,8 @@
 #pragma once
 #include "stdafx.h"
+#include "json.hpp"
 
+using json = nlohmann::json;
 using namespace std;
 
 class Product
@@ -15,6 +17,7 @@ class Product
 	string sourCream; 
 	string water;
 	string ingridientsList;
+	json ingridients;
 public:
 	Product();
 	~Product();
@@ -30,6 +33,9 @@ public:
 	void setWater(string W);
 	void makeIngridientsList();
 	void printList();
+	void makeJson();
+	void setFields(vector<string> v);
+	json getJson();
 	string getList();
 	
 };

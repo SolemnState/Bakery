@@ -3,13 +3,11 @@
 
 
 LoafBuilder::LoafBuilder()
-{
-}
+{}
 
 
 LoafBuilder::~LoafBuilder()
-{
-}
+{}
 
 void LoafBuilder::buildName()
 {

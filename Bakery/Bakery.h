@@ -6,7 +6,7 @@
 class Bakery
 {
 private:
-	Builder* builder;
+	Builder * builder;
 	std::vector<Product*> productList;
 public:
 	Bakery();
@@ -15,7 +15,8 @@ public:
 	void setProductBuilder(Builder* b);
 	void getNewProduct();
 	void printProductList();
-	void writeLog();
-	void readLog();
+	void writeJson();
+	void readJson();
+	Product* createProduct(json js);
 };
 
