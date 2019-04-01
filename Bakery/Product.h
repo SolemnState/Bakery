@@ -16,7 +16,7 @@ class Product
 	string custard; 
 	string sourCream; 
 	string water;
-	string ingridientsList;
+	//string ingridientsList;
 	json ingridients;
 public:
 	Product();
@@ -31,7 +31,7 @@ public:
 	void setCustard(string Cu);
 	void setSourCream(string SC);
 	void setWater(string W);
-	void makeIngridientsList();
+	string makeIngridientsList();
 	void printList();
 	void makeJson();
 	void setFields(vector<string> v);

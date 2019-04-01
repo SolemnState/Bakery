@@ -46,18 +46,33 @@ void Bakery::printProductList()
 
 void Bakery::writeJson()
 {
-	ofstream file("Log.json",ios::app);
 	if (!productList.empty())
 	{
-		for (auto P : productList)
+		ifstream file;
+		file.open("Log.json");
+		json list = json::array();
+		file.seekg(0,ios::end);
+		if (int(file.tellg()) != 0)
 		{
-			file << P->getJson() << endl;
+			file.seekg(0, ios::beg);
+			json temp = json::array();
+			file>>temp;
+			for (auto& element : temp)
+			{
+				list.push_back(element);
+			}
 		}
-		file << " ";
+		file.close();
+		ofstream newFile("Log.json", ios::out | ios::trunc);
+			for (auto P : productList)
+				list.push_back(P->getJson());
+		
+		newFile << setw(2) << list;
 		productList.erase(productList.begin(), productList.end());
+		newFile.close();
 	}
 	else cout << "Can't write info. Bake something first!" << endl;
-	file.close();
+	
 }
 
 void Bakery::readJson()
@@ -71,16 +86,10 @@ void Bakery::readJson()
 		if (int(file.tellg()) != 0)
 		{
 			file.seekg(0, ios::beg);
-			while (!file.eof())
-			{
-				string buf;
-				getline(file, buf);
-				if (buf != " ")
-				{
-					json js = json::parse(buf);
-					productList.push_back(createProduct(js));
-				}
-			}
+			json j;
+			file >> j;
+			for (auto& prod : j)
+				productList.push_back(createProduct(prod));
 			this->printProductList();
 			productList.erase(productList.begin(), productList.end());
 		}

@@ -14,7 +14,7 @@ Product::Product()
 	 custard = "";
 	 sourCream = "";
 	 water = "";
-	 ingridientsList = "";
+	 //ingridientsList = "";
 	 ingridients = {
 		 { "name","-" },
 	 { "ryeFlour", "-" },
@@ -78,17 +78,18 @@ void Product::setWater(string W)
 	water = W;
 }
 
-void Product::makeIngridientsList()
+string Product::makeIngridientsList()
 {
-	ingridientsList = "Name of the product: " + name + '\n' + "Wheat Flour: " + wheatFlour + " g. \n" +
+	 string str="Name of the product: " + name + '\n' + "Wheat Flour: " + wheatFlour + " g. \n" +
 		"Rye Flour: " + ryeFlour + " g. \n" + "Eggs: " + eggs + "  \n" + "Milk: "
 		+ milk + " ml. \n" + "Cream: " + cream + "ml. \n" + "Custard: " + custard + " ml. \n"
 		+ "Sour Cream: " + sourCream + " ml. \n" + "Water: " + water + " ml. \n";
+	 return str;
 }
 
 void Product::printList()
 {
-	cout << ingridientsList <<"-----------------------------------------------------"<< endl;
+	cout << this->makeIngridientsList() <<"-----------------------------------------------------"<< endl;
 }
 
 void Product::makeJson()
@@ -115,7 +116,7 @@ void Product::setFields(vector<string> v)
 	sourCream = v.at(6);
 	water = v.at(7);
 	wheatFlour = v.at(8);
-	this->makeIngridientsList();
+	//this->makeIngridientsList();
 	this->makeJson();
 }
 
@@ -124,8 +125,3 @@ json Product::getJson()
 	return ingridients;
 }
 
-
-string Product::getList()
-{
-	return ingridientsList;
-}
